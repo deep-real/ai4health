@@ -13,7 +13,7 @@
       line-height: 1.6;
     }
     header {
-      background: url('images/41xsobdg98j2hd2x5ky0.jpg') 
+      background: url('images/v3.png') 
                   center/cover no-repeat;
       color: white;
       text-align: center;
@@ -76,99 +76,334 @@
       margin: 40px 0;
       font-size: 0.95rem;
     }
+    .two-column-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+
+    .left-column, 
+    .right-column {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .right-column {
+      text-align: center;
+    }
+
+    .left-column h2,
+    .right-column h2 {
+      color: #004e7c;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .two-column-section {
+        flex-direction: column;
+      }
+    }
+    .organizer-section {
+      text-align: center;
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .organizer-section h2 {
+      color: #004e7c;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .org-dept {
+      color: #333;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .organizer-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .organizer-card {
+      background: #ffffff;
+      padding: 25px;
+      width: 230px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .organizer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+
+    .organizer-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #e0e0e0;
+    }
+
+    .organizer-card h3 {
+      font-size: 1.2rem;
+      color: #004e7c;
+      margin: 5px 0;
+    }
+
+    .organizer-card .role {
+      color: #555;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .organizer-card a {
+      color: #006fa6;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .organizer-card a:hover {
+      text-decoration: underline;
+    }
+    .schedule-section {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .schedule-section h2 {
+      text-align: center;
+      color: #004e7c;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;   /* softer row separation */
+      font-size: 1rem;
+    }
+
+    .schedule-table thead th {
+      background-color: #f0f4f8;
+      padding: 14px;
+      text-align: left;
+      color: #004e7c;
+      font-size: 1.05rem;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .schedule-table tbody tr {
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .schedule-table tbody tr:hover {
+      background: #f7fafc;
+      transform: scale(1.01);
+      transition: 0.15s ease;
+    }
+
+    .schedule-table td {
+      padding: 15px 20px;
+      vertical-align: top;
+    }
+
+    .schedule-table td:first-child {
+      width: 28%;
+      font-weight: 600;
+      color: #003d5c;
+    }
+
+    .schedule-table td strong {
+      color: #004e7c;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>AI4Health Industry Day</h1>
-    <p>📅 9:00 AM - 4:00 PM, Jan 23, 2026</p>
-    <p>📍 591 Collaboration Way, Newark, DE 19713, Room 501</p>
+    <p>📅 8:30 AM - 6:00 PM, Jan 23, 2026</p>
+    <p>📍 University of Delaware, Newark, DE 19716</p>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>
-      This event will provide a unique platform for researchers to present cutting-edge developments in AI and health,
-      spanning areas such as predictive modeling, diagnostic tools, personalized medicine, and medical imaging.
-      By bringing together academia and industry, AI4Health aims to drive innovative solutions that address pressing
-      challenges in healthcare, from improving patient outcomes to optimizing healthcare delivery systems.
-    </p>
-    <p>
-      This one-day workshop also serves as a launching point for research and educational partnerships, where students
-      and faculty can engage directly with industry partners to bridge the gap between theoretical advancements and
-      real-world applications. By facilitating cross-disciplinary dialogue, AI4Health aims to nurture collaborative
-      projects, internships, and research initiatives that empower the next generation of AI researchers and practitioners.
-      Through this workshop, we aim to establish a foundation for sustainable, impactful collaborations that will contribute
-      to the future of AI in health/healthcare.
-    </p>
+  <section class="two-column-section">
+
+    <div class="left-column">
+      <h2>About</h2>
+      <p>
+        This event is a one-day summit focused on real-world AI in healthcare, from predictive modeling 
+        and diagnostics to personalized care and operational improvements. Through keynotes, panels, 
+        technical talks, and interactive discussion sessions, the event brings together researchers, 
+        health systems, policymakers, and industry leaders to explore real problems, prototype ideas, 
+        and build partnerships that last.
+      </p>
+      <p>
+        This year, we are honored to welcome Delaware’s Secretary of Health and Social Services, 
+        Secretary Young, who will open the day with a keynote address on the state’s vision for 
+        healthcare innovation, and the role of AI in strengthening 
+        community health infrastructure.
+      </p>
+    </div>
+
+    <div class="right-column">
+      <h2>Free Registration</h2>
+      <p>Scan the QR code to register!</p>
+
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?data=https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog&size=150x150"
+        alt="QR Code">
+
+      <br>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog"
+        class="register-button">
+        Or Click Here for Registration
+      </a>
+    </div>
+
   </section>
 
-  <section>
+  <section class="schedule-section">
     <h2>Schedule</h2>
-    <table>
-      <tr>
-        <th>TIME</th>
-        <th>EVENT</th>
-      </tr>
-      <tr>
-        <td>9:00 am - 10:00 am</td>
-        <td>Opening Remarks</td>
-      </tr>
-      <tr>
-        <td>10:00 am - 11:00 am</td>
-        <td>Keynote</td>
-      </tr>
-      <tr>
-        <td>11:00 am - 12:00 pm</td>
-        <td>Panel Discussion</td>
-      </tr>
-      <tr>
-        <td>12:00 pm - 1:00 pm</td>
-        <td>Lunch and poster</td>
-      </tr>
-      <tr>
-        <td>1:00 pm - 2:00 pm</td>
-        <td>Session 1</td>
-      </tr>
-      <tr>
-        <td>2:00 pm - 2:10 pm</td>
-        <td>Break</td>
-      </tr>
-      <tr>
-        <td>2:10 pm - 3:10 pm</td>
-        <td>Session 2</td>
-      </tr>
-      <tr>
-        <td>3:10 pm - 3:20 pm</td>
-        <td>Break</td>
-      </tr> 
-      <tr>
-        <td>3:20 pm - 3:50 pm</td>
-        <td>Connection discussion</td>
-      </tr>
-      <tr>
-        <td>3:50 pm - 4:00 pm</td>
-        <td>Closing remarks</td>
-      </tr>
+
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th><span>🕒</span> TIME</th>
+          <th><span>📌</span> SESSION</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>8:30 am – 9:00 am</td>
+          <td>Registration & Coffee</td>
+        </tr>
+        <tr>
+          <td>9:00 am – 9:05 am</td>
+          <td>Welcome Remarks</td>
+        </tr>
+        <tr>
+          <td>9:10 am – 9:20 am</td>
+          <td><strong>Opening Remarks</strong>
+          <br>Conference vision: AI for Health and community impact<br>
+          <span style="color:#555;">Speakers: Dr. Weisong Shi, Patrick Callahan, and Xi Peng</span></td>
+        </tr>
+        <tr>
+          <td>9:20 am – 9:40 am</td>
+          <td><strong>Keynote</strong><br>
+AI in Primary Care: Challenges and Opportunities for the State<br>
+<span style="color:#555;">Speaker: Secretary Young</span></td>
+        </tr>
+        <tr>
+          <td>9:40 am – 10:00 am</td>
+          <td>Coffee Break</td>
+        </tr>
+        <tr>
+          <td>10:00 am – 11:00 am</td>
+          <td>Panel Discussion: AI for Cancer and Primary Health</td>
+        </tr>
+        <tr>
+          <td>11:00 am – 12:00 pm</td>
+          <td>Talks Session 1</td>
+        </tr>
+        <tr>
+          <td>12:00 pm – 1:00 pm</td>
+          <td>Lunch & Poster Session</td>
+        </tr>
+        <tr>
+          <td>1:00 pm – 2:00 pm</td>
+          <td>Talks Session 2</td>
+        </tr>
+        <tr>
+          <td>2:00 pm – 2:15 pm</td>
+          <td>Coffee Break</td>
+        </tr>
+        <tr>
+          <td>2:15 pm – 3:15 pm</td>
+          <td>Talks Session 3</td>
+        </tr>
+        <tr>
+          <td>3:15 pm – 4:00 pm</td>
+          <td>Closing Remarks</td>
+        </tr>
+        <tr>
+          <td>4:15 pm – 4:30 pm</td>
+          <td>Group Photo</td>
+        </tr>
+        <tr>
+          <td>5:00 pm – 6:00 pm</td>
+          <td>Reception</td>
+        </tr>
+      </tbody>
     </table>
   </section>
 
-  <section class="registration">
-    <h2>Registration</h2>
-    <p>Scan the QR code to register!</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog&size=150x150" alt="QR Code">
-    <br>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog" class="register-button">Or Click Here for Registration</a>
-  </section>
 
-  <section>
-    <h2>Organizer</h2>
-    <p style="text-align:center;">
+  <section class="organizer-section">
+    <h2>Organizers</h2>
+    <p class="org-dept">
       Department of Computer & Information Sciences<br>
-      University of Delaware<br><br>
-      Chair: Xi Peng (<a href="mailto:xipeng@udel.edu">xipeng@udel.edu</a>)
+      University of Delaware
     </p>
+
+    <div class="organizer-grid">
+
+      <!-- Organizer 1 -->
+      <div class="organizer-card">
+        <img src="images/organizer_xi_peng.webp" alt="Xi Peng">
+        <h3>Xi Peng</h3>
+        <p class="role">Chair</p>
+        <a href="mailto:xipeng@udel.edu">xipeng@udel.edu</a>
+      </div>
+
+      <!-- Organizer 2 -->
+      <div class="organizer-card">
+        <img src="images/patrick-callahan-profile.jpg" alt="Patrick Callahan">
+        <h3>Patrick Callahan</h3>
+        <p class="role">Chair</p>
+        <a href="mailto:pjc@pjcallahan.com">pjc@pjcallahan.com</a>
+      </div>
+
+      <!-- Organizer 3 -->
+      <div class="organizer-card">
+        <img src="images/Weisong_Shi_HR.webp" alt="Weisong Shi">
+        <h3>Weisong Shi</h3>
+        <p class="role">Co-Chair</p>
+        <a href="mailto:weisong@udel.edu">weisong@udel.edu</a>
+      </div>
+
+      <!-- Organizer 4 -->
+      <div class="organizer-card">
+        <img src="images/Celia-Payen.png" alt="Celia Payen">
+        <h3>Celia Payen</h3>
+        <p class="role">Co-Chair</p>
+        <a href="mailto:payen.celia@gmail.com">payen.celia@gmail.com</a>
+      </div>
+
+    </div>
   </section>
 
   <footer>
