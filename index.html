@@ -13,11 +13,11 @@
       line-height: 1.6;
     }
     header {
-      background: url('images/V9.png') 
+      background: url('images/V10-1.png') 
                   center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 100px 20px;
     }
     header h1 {
       font-size: 3rem;
@@ -113,14 +113,14 @@
     .organizer-section {
       text-align: center;
       max-width: 1100px;
-      margin: 80px auto;
+      margin: 40px auto;
       padding: 20px;
     }
 
     .organizer-section h2 {
       color: #004e7c;
       margin-bottom: 15px;
-      font-size: 2rem;
+      font-size: 1.9rem;
     }
 
     .org-dept {
@@ -184,7 +184,7 @@
     }
     .schedule-section {
       max-width: 1000px;
-      margin: 80px auto;
+      margin: 40px auto;
       padding: 20px;
     }
 
@@ -192,7 +192,7 @@
       text-align: center;
       color: #004e7c;
       margin-bottom: 25px;
-      font-size: 2rem;
+      font-size: 1.9rem;
     }
 
     .schedule-table {
@@ -238,14 +238,12 @@
       color: #004e7c;
     }
 .header-registration {
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  display: block;
-  border-radius: 12px;
+  margin: 25px auto 0;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-  max-width: 580px;    /* <-- NEW: limits the width */
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: none;
 }
 
 .header-registration img {
@@ -270,13 +268,16 @@
 }
 .about-section {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 40px auto;
   padding: 0 40px;
 }
 
 .about-box {
   background: white;
-  padding: 20px;
+    padding-top: 0.01px;   /* ⬅ smaller top */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
@@ -284,8 +285,8 @@
 .about-box h2 {
   color: #004e7c;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.0rem;     /* <-- NEW */
+  margin-bottom: 10px;
+  font-size: 1.8rem;     /* <-- NEW */
 }
 .organizer-card .title {
   color: #333;
@@ -340,6 +341,10 @@
   text-align: justify;
   text-justify: inter-word;
 }
+
+.header-register-button {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
   </style>
 </head>
 <body>
@@ -348,10 +353,10 @@
   <h1>AI4Health Industry Day is Back!</h1>
 
   <!-- Larger, white event information -->
-  <p style="font-size:2.0rem; color:white; margin:10px 0;">
+  <p style="font-size:1.4rem; color:white; margin:10px 0;">
     📅 8:30 AM - 6:00 PM, Jan 23, 2026
   </p>
-  <p style="font-size:2.0rem; color:white; margin:5px 0;">
+  <p style="font-size:1.4rem; color:white; margin:5px 0;">
     📍 University of Delaware, Newark, DE 19716
   </p>
 
@@ -362,15 +367,15 @@
     <a 
       href="https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog"
       class="register-button header-register-button"
-      style="font-size:2.2rem;"
+      style="font-size:1.7rem;"
     >
       Click here for free registration!
     </a>
 
-    <!-- URL text (fallback) -->
+    <!-- URL text (fallback)
     <p style="margin-top:15px; font-size:0.85rem; color:black; word-break:break-all;">
       https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog
-    </p>
+    </p> -->
   </div>
 </header>
 
@@ -391,6 +396,16 @@
       Secretary Young, to open the day with with an address on the state's vision for healthcare innovation, AI, and the future of public health infrastructure.
       Her participation will anchor the conversation and highlight Delaware’s commitment to responsible, inclusive innovation in healthcare from policy 
       to practice, and across every community.
+    </p>
+    <p>
+<strong style="color:#004e7c;">Expect:</strong>
+<ul>
+  <li>Keynotes from national leaders in AI and health</li>
+  <li>Panels on deployment, equity, and real clinical challenges</li>
+  <li>Thematic sessions featuring speakers from academia, industry, health systems, and government</li>
+  <li>Poster sessions from top students and researchers</li>
+  <li>Coffee chat</li>
+</ul>
     </p>
   </div>
 </section>
