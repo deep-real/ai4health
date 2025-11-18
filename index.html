@@ -13,7 +13,7 @@
       line-height: 1.6;
     }
     header {
-      background: url('images/v3.png') 
+      background: url('images/V4.png') 
                   center/cover no-repeat;
       color: white;
       text-align: center;
@@ -140,7 +140,7 @@
     .organizer-card {
       background: #ffffff;
       padding: 25px;
-      width: 230px;
+      width: 240px;
       border-radius: 12px;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -237,53 +237,153 @@
     .schedule-table td strong {
       color: #004e7c;
     }
+    .header-registration {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.header-registration img {
+  width: 150px;
+  height: 150px;
+  margin: 10px 0;
+}
+
+.header-register-button {
+  margin-top: 10px;
+  background-color: #006fa6;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+.header-registration p {
+  color: black !important;
+}
+
+.header-register-button:hover {
+  background-color: #004e7c;
+}
+.about-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+.about-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.about-box h2 {
+  color: #004e7c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.organizer-card .title {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.organizer-card .affiliation {
+  color: #555;
+  font-size: 0.9rem;
+}
+.organizer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;   /* ❗ prevent wrapping to next line */
+  gap: 30px;
+}
+
+.organizer-card h3 {
+  font-size: 1.3rem;
+  color: #004e7c;
+  margin: 10px 0 6px 0;   /* tighten spacing */
+}
+
+.organizer-card .title {
+  color: #333;
+  font-size: 1rem;
+    overflow: hidden;
+  margin: 0;              /* no extra spacing */
+}
+.organizer-card .title {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap; /* prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* optional: fade out if too long */
+  margin: 0;
+}
+
+.organizer-card .affiliation {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 2px 0 10px 0;   /* small spacing under affiliation */
+}
+
+.organizer-card .role {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 5px;        /* tighten spacing above role */
+}
+.about-box p {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
   </style>
 </head>
 <body>
 
   <header>
-    <h1>AI4Health Industry Day</h1>
+    <h1>AI4Health Industry Day is Back!</h1>
     <p>📅 8:30 AM - 6:00 PM, Jan 23, 2026</p>
     <p>📍 University of Delaware, Newark, DE 19716</p>
+      <div class="header-registration">
+    <p style="font-size:1.1rem; margin-bottom:10px;">Free Registration</p>
+
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?data=https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog&size=150x150"
+      alt="QR Code"
+    >
+
+    <br>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog"
+       class="register-button header-register-button">
+      Click Here to Register
+    </a>
+  </div>
   </header>
 
-  <section class="two-column-section">
+  <section class="about-section">
+  <div class="about-box">
+    <h2>About</h2>
+    <p>
+      AI4Health 2025 Industry day is back! Join us for a one-day summit focused on real-world AI in healthcare, 
+      from predictive modeling and diagnostics to personalized care and operational improvements.
+      This year, we are zooming in on clinical applications and primary care, especially across the 
+      Delaware Valley and tristate region. Researchers, health systems, policymakers, and industry 
+      leaders will meet to share problems, prototype ideas, and build partnerships that last.
+    </p>
+    <p>
+      <strong style="color:#004e7c;">Speaker Spotlight:</strong>
+      This year, we are honored to welcome Delaware’s Secretary of Health and Social Services, 
+      Secretary Young, to open the day with with an address on the state's vision for healthcare innovation, AI, and the future of public health infrastructure.
+      Her participation will anchor the conversation and highlight Delaware’s commitment to responsible, inclusive innovation in healthcare from policy 
+      to practice, and across every community.
+    </p>
+  </div>
+</section>
 
-    <div class="left-column">
-      <h2>About</h2>
-      <p>
-        This event is a one-day summit focused on real-world AI in healthcare, from predictive modeling 
-        and diagnostics to personalized care and operational improvements. Through keynotes, panels, 
-        technical talks, and interactive discussion sessions, the event brings together researchers, 
-        health systems, policymakers, and industry leaders to explore real problems, prototype ideas, 
-        and build partnerships that last.
-      </p>
-      <p>
-        This year, we are honored to welcome Delaware’s Secretary of Health and Social Services, 
-        Secretary Young, who will open the day with a keynote address on the state’s vision for 
-        healthcare innovation, and the role of AI in strengthening 
-        community health infrastructure.
-      </p>
-    </div>
-
-    <div class="right-column">
-      <h2>Free Registration</h2>
-      <p>Scan the QR code to register!</p>
-
-      <img
-        src="https://api.qrserver.com/v1/create-qr-code/?data=https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog&size=150x150"
-        alt="QR Code">
-
-      <br>
-
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScYCSwd9iEmdfOA06g6mOlT_nIuC95wfnONKvkTbwpNqyOjog/viewform?usp=dialog"
-        class="register-button">
-        Or Click Here for Registration
-      </a>
-    </div>
-
-  </section>
 
   <section class="schedule-section">
     <h2>Schedule</h2>
@@ -327,7 +427,10 @@ AI in Primary Care: Challenges and Opportunities for the State<br>
         </tr>
         <tr>
           <td>11:00 am – 12:00 pm</td>
-          <td>Talks Session 1</td>
+          <td><strong>Talks Session 1</strong><br>
+            <span style="color:#555;">Speaker: TBD</span>
+          </td>
+        </tr>
         </tr>
         <tr>
           <td>12:00 pm – 1:00 pm</td>
@@ -335,7 +438,9 @@ AI in Primary Care: Challenges and Opportunities for the State<br>
         </tr>
         <tr>
           <td>1:00 pm – 2:00 pm</td>
-          <td>Talks Session 2</td>
+          <td><strong>Talks Session 2</strong><br>
+            <span style="color:#555;">Speaker: TBD</span>
+          </td>
         </tr>
         <tr>
           <td>2:00 pm – 2:15 pm</td>
@@ -343,7 +448,9 @@ AI in Primary Care: Challenges and Opportunities for the State<br>
         </tr>
         <tr>
           <td>2:15 pm – 3:15 pm</td>
-          <td>Talks Session 3</td>
+          <td><strong>Talks Session 3</strong><br>
+            <span style="color:#555;">Speaker: TBD</span>
+          </td>
         </tr>
         <tr>
           <td>3:15 pm – 4:00 pm</td>
@@ -364,10 +471,10 @@ AI in Primary Care: Challenges and Opportunities for the State<br>
 
   <section class="organizer-section">
     <h2>Organizers</h2>
-    <p class="org-dept">
+    <!-- <p class="org-dept">
       Department of Computer & Information Sciences<br>
       University of Delaware
-    </p>
+    </p> -->
 
     <div class="organizer-grid">
 
@@ -375,32 +482,37 @@ AI in Primary Care: Challenges and Opportunities for the State<br>
       <div class="organizer-card">
         <img src="images/organizer_xi_peng.webp" alt="Xi Peng">
         <h3>Xi Peng</h3>
-        <p class="role">Chair</p>
-        <a href="mailto:xipeng@udel.edu">xipeng@udel.edu</a>
+        
+        <p class="title">Associate Professor</p>   <!-- NEW -->
+        <p class="affiliation">UD CIS</p>                    <!-- NEW -->
+        <p class="role">Chair</p> <!-- existing role row -->
       </div>
 
       <!-- Organizer 2 -->
       <div class="organizer-card">
         <img src="images/patrick-callahan-profile.jpg" alt="Patrick Callahan">
         <h3>Patrick Callahan</h3>
+        <p class="title">Head of Data and Analytics</p>   <!-- NEW -->
+        <p class="affiliation">LabWare</p>                    <!-- NEW -->
         <p class="role">Chair</p>
-        <a href="mailto:pjc@pjcallahan.com">pjc@pjcallahan.com</a>
       </div>
 
       <!-- Organizer 3 -->
       <div class="organizer-card">
-        <img src="images/Weisong_Shi_HR.webp" alt="Weisong Shi">
-        <h3>Weisong Shi</h3>
+        <img src="images/Celia-Payen.png" alt="Celia Payen">
+        <h3>Celia Payen</h3>
+        <p class="title">Technical Leader</p>   <!-- NEW -->
+        <p class="affiliation">Dupont</p>                    <!-- NEW -->
         <p class="role">Co-Chair</p>
-        <a href="mailto:weisong@udel.edu">weisong@udel.edu</a>
       </div>
 
       <!-- Organizer 4 -->
-      <div class="organizer-card">
-        <img src="images/Celia-Payen.png" alt="Celia Payen">
-        <h3>Celia Payen</h3>
+            <div class="organizer-card">
+        <img src="images/Weisong_Shi_HR.webp" alt="Weisong Shi">
+        <h3>Weisong Shi</h3>
+        <p class="title">Alumni Distinguished Professor</p>   <!-- NEW -->
+        <p class="affiliation">UD CIS</p>                    <!-- NEW -->
         <p class="role">Co-Chair</p>
-        <a href="mailto:payen.celia@gmail.com">payen.celia@gmail.com</a>
       </div>
 
     </div>
