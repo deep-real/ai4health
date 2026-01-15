@@ -194,49 +194,87 @@
       margin-bottom: 25px;
       font-size: 1.9rem;
     }
+/* ---------- Schedule Improvements ---------- */
 
-    .schedule-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 8px;   /* softer row separation */
-      font-size: 1rem;
-    }
+.schedule-table col.time { width: 18%; }
+.schedule-table col.session { width: 34%; }
+.schedule-table col.chair { width: 18%; }
+.schedule-table col.speakers { width: 30%; }
 
-    .schedule-table thead th {
-      background-color: #f0f4f8;
-      padding: 14px;
-      text-align: left;
-      color: #004e7c;
-      font-size: 1.05rem;
-      border-radius: 8px 8px 0 0;
-    }
+.session-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background: #e6f2fa;
+  color: #004e7c;
+}
 
-    .schedule-table tbody tr {
-      background: white;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
+.schedule-table tbody tr.long-session {
+  border-left: 5px solid #006fa6;
+}
 
-    .schedule-table tbody tr:hover {
-      background: #f7fafc;
-      transform: scale(1.01);
-      transition: 0.15s ease;
-    }
+.schedule-table tbody tr:hover {
+  background: #f7fafc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: 0.15s ease;
+}
 
-    .schedule-table td {
-      padding: 15px 20px;
-      vertical-align: top;
-    }
+.speaker-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.1em;
+}
 
-    .schedule-table td:first-child {
-      width: 28%;
-      font-weight: 600;
-      color: #003d5c;
-    }
+.speaker-list li {
+  margin-bottom: 0.6em;
+  line-height: 1.35;
+}
 
-    .schedule-table td strong {
-      color: #004e7c;
-    }
+.speaker-topic {
+  margin-top: 2px;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.speaker-topic::before {
+  content: "Topic: ";
+  font-weight: 600;
+  color: #004e7c;
+}
+
+/* ---------- Mobile Friendly ---------- */
+@media (max-width: 768px) {
+  .schedule-table thead {
+    display: none;
+  }
+
+  .schedule-table tr {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .schedule-table td {
+    display: block;
+    padding: 10px 16px;
+  }
+
+  .schedule-table td::before {
+    font-weight: 600;
+    color: #004e7c;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .schedule-table td:nth-child(1)::before { content: "Time"; }
+  .schedule-table td:nth-child(2)::before { content: "Session"; }
+  .schedule-table td:nth-child(3)::before { content: "Chair"; }
+  .schedule-table td:nth-child(4)::before { content: "Speakers"; }
+}
+
+
 .header-registration {
   margin: 25px auto 0;
   text-align: center;
@@ -345,6 +383,19 @@
 .header-register-button {
   border: 2px solid rgba(255, 255, 255, 0.75);
 }
+.session-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #006fa6;
+  margin-bottom: 6px;
+}
+
+.session-title {
+  font-size: 0.95rem;
+  /* font-weight: 600; */
+  color: #222;
+  line-height: 1.3;
+}
 .example-images {
   display: flex;
   justify-content: center;
@@ -434,97 +485,195 @@
 </section>
 
 
-  <section class="schedule-section">
-    <h2>Schedule</h2>
+<section class="schedule-section">
+  <h2>Schedule</h2>
 
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th><span>🕒</span> TIME</th>
-          <th><span>📌</span> SESSION</th>
-        </tr>
-      </thead>
+  <table class="schedule-table">
+    <colgroup>
+      <col class="time">
+      <col class="session">
+      <col class="chair">
+      <col class="speakers">
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <td>8:00 am – 8:30 am</td>
-          <td>Breakfast</td>
-        </tr>
-        <tr>
-          <td>8:30 am – 8:50 am</td>
-          <td>Registration & Coffee</td>
-        </tr>
-        <tr>
-          <td>8:50 am – 9:00 am</td>
-          <td>Welcome & Opening Remarks</td>
-        </tr>
-        <tr>
-          <td>9:00 am – 9:25 am</td>
-          <td><strong>Opening Address</strong>
-          <br>
-          <!-- <br>Conference vision: AI for Health and community impact<br> -->
-          <span style="color:#555;">Speakers: Secretary of Health</span></td>
-        </tr>
-        <tr>
-          <td>9:25 am – 10:00 am</td>
-          <td>Morning Keynote</td>
-          <!-- <td><strong>Morning Keynote</strong><br>
-            AI in Primary Care: Challenges and Opportunities for the State<br>
-            <span style="color:#555;">Speaker: Secretary Young</span></td> -->
-        </tr>
-        <tr>
-          <td>10:00 am – 10:15 am</td>
-          <td>Coffee Break & Networking</td>
-        </tr>
-        <tr>
-          <td>10:15 am – 11:15 am</td>
-          <td>Talk Session 1: AI in Clinical Care & Primary Health</td>
-        </tr>
-        <tr>
-          <td>11:15 am – 12:15 pm</td>
-          <td>Talk Session 2: AI for Specialty Care</td>
-          <!-- <td><strong>Talks Session 1</strong><br>
-            <span style="color:#555;">Speaker: TBD</span>
-          </td> -->
-        </tr>
-        </tr>
-        <tr>
-          <td>12:15 pm – 1:15 pm</td>
-          <td>Lunch & Poster / Networking Session</td>
-        </tr>
-        <tr>
-          <td>1:15 pm – 2:15 pm</td>
-          <td>Talk Session 3: Data, Imaging & Genomics in Health</td>
-          <!-- <td><strong>Talks Session 2</strong><br>
-            <span style="color:#555;">Speaker: TBD</span>
-          </td> -->
-        </tr>
-        <tr>
-          <td>2:15 pm – 3:00 pm</td>
-          <td>Industry & Health Systems Panel</td>
-        </tr>
-        <tr>
-          <td>3:00 pm – 3:15 pm</td>
-          <td>Break</td>
-          <!-- <td><strong>Talks Session 3</strong><br>
-            <span style="color:#555;">Speaker: TBD</span>
-          </td> -->
-        </tr>
-        <tr>
-          <td>3:15 pm – 4:15 pm</td>
-          <td>Case Studies</td>
-        </tr>
-        <tr>
-          <td>4:15 pm – 4:30 pm</td>
-          <td>Closing Synthesis & Next Steps</td>
-        </tr>
-        <tr>
-          <td>4:30 pm – 5:00 pm</td>
-          <td>Informal Networking Reception</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <thead>
+      <tr>
+        <th>🕒 TIME</th>
+        <th>📌 SESSION</th>
+        <th>CHAIR / WELCOME</th>
+        <th>🎤 SPEAKER(S)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>8:00 – 8:30</td>
+        <td>Breakfast</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>8:30 – 8:50</td>
+        <td>Registration & Coffee</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>8:50 – 9:00</td>
+        <td>
+          Welcome & Opening Remarks
+        </td>
+        <td>—</td>
+        <td>Weisong Shi, Patrick Callahan, Miguel Diaz</td>
+      </tr>
+
+      <tr>
+        <td>9:00 – 9:25</td>
+        <td>Opening Address
+        </td>
+        <td>Patrick Callahan</td>
+        <td><strong>Secretary of Health</strong></td>
+      </tr>
+
+      <tr>
+        <td>9:25 – 10:00</td>
+        <td>
+          Morning Keynote
+        </td>
+        <td>Xi Peng</td>
+        <td>TBD</td>
+      </tr>
+
+      <tr>
+        <td>10:00 – 10:15</td>
+        <td>Coffee Break & Networking</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr class="long-session">
+        <td>10:15 – 11:15</td>
+        <td>
+          <div class="session-label">Talk Session 1</div>
+          <div class="session-title">AI in Clinical Care &amp; Primary Health</div>
+        </td>
+        <td>Xi Peng</td>
+        <td>
+          <ul class="speaker-list">
+            <li><strong>Prof. Ulf Schiller</strong>, UD CIS</li>
+            <li>
+              <strong>Tim Gibbs</strong>, Delaware Health Force
+              <div class="speaker-topic">Healthcare workforce analytics & projections</div>
+            </li>
+            <li><strong>Susan Smith</strong>, ChristianaCare</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr class="long-session">
+        <td>11:15 – 12:15</td>
+        <td>
+          <div class="session-label">Talk Session 2</div>
+          <div class="session-title">AI for Specialty Care</div>
+        </td>
+        <td>Celia Payen</td>
+        <td>
+          <ul class="speaker-list">
+            <li>
+              <strong>Connor Callahan</strong>, Acellus Health
+              <div class="speaker-topic">AI in cancer care & EHR normalization</div>
+            </li>
+            <li><strong>Tom Schwaab</strong></li>
+            <li><strong>Cathy Wu</strong>, UD</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>12:15 – 1:15</td>
+        <td>Lunch & Poster / Networking</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr class="long-session">
+        <td>1:15 – 2:15</td>
+        <td>
+          <div class="session-label">Talk Session 3</div>
+          <div class="session-title">Data, Imaging &amp; Genomics in Health</div>
+        </td>
+        <td>Ulf Schiller</td>
+        <td>
+          <ul class="speaker-list">
+            <li>
+              <strong>Austin Brockmeier</strong>, UD
+              <div class="speaker-topic">ML for neuroimaging & risk profiling</div>
+            </li>
+            <li><strong>Dr. Parul Yadav</strong></li>
+            <li><strong>Kelly Banas</strong>, ChristianaCare GEI</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr class="long-session">
+        <td>2:15 – 3:00</td>
+        <td>
+          <div class="session-label">Panel</div>
+          <div class="session-title">Industry & Health Systems Panel</div>
+        </td>
+        <td>Patrick Pelathy</td>
+        <td>
+          <ul class="speaker-list">
+            <li><strong>Neil Hockstein</strong>, Delaware Health Commissioner</li>
+            <li>
+              <strong>Maureen Rinkunas</strong>, Rock Health
+              <div class="speaker-topic">Innovation curve & adoption realities</div>
+            </li>
+            <li><strong>Paul Meyer</strong>, Smart PBC</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:00 – 3:15</td>
+        <td>Break</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+
+      <tr>
+        <td>3:15 – 4:15</td>
+        <td>
+          Case Studies
+        </td>
+        <td>Weisong Shi</td>
+        <td>
+          <ul class="speaker-list">
+            <li><strong>Omar</strong>, ChristianaCare</li>
+            <li><strong>Ryan Sysko</strong></li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>4:15 – 4:30</td>
+        <td>Closing Synthesis & Next Steps</td>
+        <td>—</td>
+        <td>Patrick Callahan / Weisong Shi</td>
+      </tr>
+
+      <tr>
+        <td>4:30 – 5:00</td>
+        <td>Networking Reception</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
 
   <section class="organizer-section">
